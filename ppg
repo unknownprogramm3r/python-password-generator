@@ -1,0 +1,51 @@
+#!/usr/bin/python
+
+######################
+# PASSWORD GENERATOR #
+######################
+
+# https://docs.python.org/2/library/random.html
+# https://docs.python.org/2/library/string.html#module-string
+# http://stackoverflow.com/questions/2257441/random-string-generation-with-upper-case-letters-and-digits-in-python
+# http://stackoverflow.com/questions/21622897/typeerror-range-integer-end-argument-expected-got-str-in-python
+# http://stackoverflow.com/questions/287871/print-in-terminal-with-colors-using-python
+
+import os, random, string
+
+class colors:
+    RED = '\033[91m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    BLUE = '\033[94m'
+    MAGENTA = '\033[95m'
+    CYAN = '\033[96m'
+    WHITE = '\033[67m'
+    ENDC = '\033[0m'
+
+# HEADER
+
+print ""
+print '\033[1;36m--------------------------------\033[1;m'
+print '\033[1;36m-PYTHON-PASSWORD-GENERATOR-v1.2-\033[1;m'
+print '\033[1;36m--------------------------------\033[1;m'
+
+# PROGRAM
+
+restart = 1
+if restart!=("x", "X"):
+    print ""
+    length = int(raw_input("Type password length: "))
+    amount = int(raw_input("How many passwords to generate: "))
+    chars = string.ascii_letters + string.digits + string.punctuation
+    random.seed = (os.urandom(1024))
+
+    print ""
+
+    for _ in xrange(amount):
+        password = ''.join(random.choice(chars) for i in xrange(length))
+        print colors.CYAN + password + colors.ENDC
+
+    print ""
+    restart = raw_input("press any key to start again, or X to exit: ")
+
+print ""
