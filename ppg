@@ -32,7 +32,7 @@ print '\033[1;36m--------------------------------\033[1;m'
 # PROGRAM
 
 restart = 1
-if restart!=("x", "X"):
+while restart!=("x", "X"):
     print ""
     length = int(raw_input("Type password length: "))
     amount = int(raw_input("How many passwords to generate: "))
