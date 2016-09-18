@@ -1,4 +1,4 @@
-# shutdown-timer
+# python-password-generator
 shell script in python for generating passwords
 
 ## Installation
@@ -14,7 +14,7 @@ sudo bash install.sh
 * to run script click on shutdown-timer icon in menu or type in terminal:
 
 ```
-shutdown-timer
+ppg
 ```
 
 ## Uninstallation
@@ -28,5 +28,5 @@ sudo bash uninstall.sh
 
 * uninstall.sh script will delete all files installed previously
 
-best regards,
+best regards,  
 Sławek Kaczmarek
